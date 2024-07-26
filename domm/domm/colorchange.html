@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Color changer</title>
+        <link rel="stylesheet" href="./color.css">
+    </head>
+    <body>
+    <div class="main">
+        <div class="container">
+            <h2>#fff</h2>
+            <button onclick="change()">click me</button>
+        </div>
+    </div>
+    </body>
+    <script>
+        let change=()=>{
+            const randomNumber=Math.floor(Math.random()*16777215);
+            const randomCode="#"+randomNumber.toString(16);
+            document.body.style.background=randomCode
+            document.querySelector("h2").innerText=randomCode;
+        }
+        setInterval(change,200);
+    </script>
+</html> 
